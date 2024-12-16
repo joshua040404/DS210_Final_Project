@@ -7,7 +7,7 @@ pub fn load_data(file_path: &str) -> Vec<HashMap<String, String>> {
     let reader = BufReader::new(file);
     let mut data = Vec::new();
     let mut headers = Vec::new();
-
+    
     for (index, line) in reader.lines().enumerate() {
         let line = line.expect("Failed to read line");
         let values: Vec<&str> = line.split(';').collect();
